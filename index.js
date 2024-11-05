@@ -16,8 +16,7 @@ function agregarRegistro() {
     // SweetAlert2 para confirmar que el registro fue agregado
     Swal.fire({
       icon: 'success',
-      title: 'Registro Agregado',
-      text: 'La persona ha sido registrada correctamente.',
+      title: '<span style="color: #ffffff;">Registro Agregado</span>',
       showConfirmButton: true,
       timer: 2000
     });
@@ -28,7 +27,6 @@ function agregarRegistro() {
     Swal.fire({
       icon: 'warning',
       title: 'Campos Incompletos',
-      text: 'Por favor, complete todos los campos.',
       showConfirmButton: true
     });
   }
@@ -50,7 +48,7 @@ function buscarRegistro() {
 
   if (persona) {
     document.getElementById('result').innerText = `Resultado: 
-    
+
     Nombre: ${persona.nombre}, 
     Apellidos: ${persona.apellidos}, 
     Dirección: ${persona.direccion}, 
@@ -59,8 +57,7 @@ function buscarRegistro() {
     // SweetAlert2 para indicar que la persona no fue encontrada
     Swal.fire({
       icon: 'error',
-      title: 'No Encontrado',
-      text: 'No se encontró la persona con la cédula ingresada.',
+      title: 'No se encontró la persona con la cédula ingresada.',
       showConfirmButton: true
     });
   }
