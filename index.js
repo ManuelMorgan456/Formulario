@@ -12,10 +12,25 @@ function agregarRegistro() {
   if (cedula && nombre && apellidos && direccion && telefono) {
     const persona = { cedula, nombre, apellidos, direccion, telefono };
     registros.push(persona);
-    alert("Registro agregado correctamente");
+    
+    // SweetAlert2 para confirmar que el registro fue agregado
+    Swal.fire({
+      icon: 'success',
+      title: 'Registro Agregado',
+      text: 'La persona ha sido registrada correctamente.',
+      showConfirmButton: true,
+      timer: 2000
+    });
+
     limpiarFormulario();
   } else {
-    alert("Por favor, complete todos los campos");
+    // SweetAlert2 para advertir sobre campos incompletos
+    Swal.fire({
+      icon: 'warning',
+      title: 'Campos Incompletos',
+      text: 'Por favor, complete todos los campos.',
+      showConfirmButton: true
+    });
   }
 }
 
@@ -35,11 +50,18 @@ function buscarRegistro() {
 
   if (persona) {
     document.getElementById('result').innerText = `Resultado: 
+    
     Nombre: ${persona.nombre}, 
     Apellidos: ${persona.apellidos}, 
     Dirección: ${persona.direccion}, 
     Teléfono: ${persona.telefono}`;
   } else {
-    document.getElementById('result').innerText = "Resultado: No se encontró la persona con la cédula ingresada";
+    // SweetAlert2 para indicar que la persona no fue encontrada
+    Swal.fire({
+      icon: 'error',
+      title: 'No Encontrado',
+      text: 'No se encontró la persona con la cédula ingresada.',
+      showConfirmButton: true
+    });
   }
 }

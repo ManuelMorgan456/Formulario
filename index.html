@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 </head>
+
 <body>
 
     <h1>Formulario Unico</h1>
     <br>
     <h2>Registro de Personas</h2>
     <br>
-  <div class="form-container">
-    <h3>Agregar Persona</h3>
-    <input type="text" id="cedula" placeholder="Cédula" required>
-    <input type="text" id="nombre" placeholder="Nombre" required>
-    <input type="text" id="apellidos" placeholder="Apellidos" required>
-    <input type="text" id="direccion" placeholder="Dirección" required>
-    <input type="text" id="telefono" placeholder="Teléfono" required>
-    <button onclick="agregarRegistro()">Agregar Registro</button>
-  </div>
+    <div class="form-container">
+        <h3>Agregar Persona</h3>
+        <input type="text" id="cedula" placeholder="Cédula" required>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="apellidos" placeholder="Apellidos" required>
+        <input type="text" id="direccion" placeholder="Dirección" required>
+        <input type="text" id="telefono" placeholder="Teléfono" required>
+        <button onclick="agregarRegistro()">Agregar Registro</button>
+    </div>
 
-  <div class="search-container">
-    <h3>Buscar Persona</h3>
-    <input type="text" id="buscarCedula" placeholder="Ingrese cédula para buscar">
-    <button onclick="buscarRegistro()">Buscar</button>
-  </div>
+    <div class="search-container">
+        <h3>Buscar Persona</h3>
+        <input type="text" id="buscarCedula" placeholder="Ingrese cédula para buscar">
+        <button onclick="buscarRegistro()">Buscar</button>
+    </div>
 
-  <div id="result">Resultado: </div>
+    <div id="result">Resultado: </div>
 
 
     <script src="./index.js"></script>
 </body>
+
 </html>
